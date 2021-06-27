@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
@@ -9,7 +9,7 @@ import Auth from './components/Auth/Auth';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Container maxWidth="lg">
         <Navbar />
         <Switch>
@@ -17,7 +17,7 @@ const App = () => {
           <Route path="/auth" exact component={Auth} />
         </Switch>
       </Container>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
